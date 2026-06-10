@@ -1,3 +1,2 @@
-res://Scenes/player/player.tscn
-res://Scenes/player/player.gd
 res://Scenes/game/game.tscn
+res://Scenes/game/bg.gdshader
