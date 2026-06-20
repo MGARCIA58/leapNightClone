@@ -9,3 +9,6 @@ res://Scenes/traps/spike_block.tscn
 res://Scenes/traps/spike_block.gd
 res://Scenes/game/game.gd
 res://Scenes/player/player.gd
+res://Scenes/fruits/fruitbase.tscn
+res://Scenes/fruits/fruit.gd
+res://Scenes/fruits/fruit_banana.tscn

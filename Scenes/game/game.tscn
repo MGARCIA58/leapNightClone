@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://d0v7xkv3g2f8e" path="res://LeapNight Assets/Sprites/Background/Gray.png" id="2_7pssd"]
 [ext_resource type="TileSet" uid="uid://ctnigqkpkhr0i" path="res://game_tile.tres" id="2_u7m1m"]
 [ext_resource type="PackedScene" uid="uid://bgt7i6sj5c6ld" path="res://Scenes/traps/spike_block.tscn" id="5_7pssd"]
+[ext_resource type="PackedScene" uid="uid://e2tolr6hq4jv" path="res://Scenes/fruits/fruit_banana.tscn" id="7_7trcl"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0b77"]
 shader = ExtResource("1_g0siu")
@@ -72,3 +73,15 @@ scale = Vector2(1.5, 1.5)
 [node name="SpikeBlock2" parent="Floor_2" unique_id=1374082637 instance=ExtResource("5_7pssd")]
 position = Vector2(101, -43)
 scale = Vector2(1.5, 1.5)
+
+[node name="FruitBanana" parent="Floor_2" unique_id=445725208 instance=ExtResource("7_7trcl")]
+position = Vector2(-25, -21)
+
+[node name="FruitBanana2" parent="Floor_2" unique_id=639119661 instance=ExtResource("7_7trcl")]
+position = Vector2(25, -21)
+
+[node name="FruitBanana3" parent="Floor_2" unique_id=1602722030 instance=ExtResource("7_7trcl")]
+position = Vector2(-25, 13)
+
+[node name="FruitBanana4" parent="Floor_2" unique_id=618909715 instance=ExtResource("7_7trcl")]
+position = Vector2(25, 13)
