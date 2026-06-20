@@ -161,7 +161,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_spm8d")
 }],
 "loop": false,
-"name": &"disapearing",
+"name": &"dead",
 "speed": 15.0
 }, {
 "frames": [{
@@ -284,7 +284,7 @@ position = Vector2(0, -13)
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Visuals" unique_id=1216438002]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_aa0hm")
-animation = &"run"
+animation = &"dead"
 autoplay = "run"
 
 [node name="RayCast2D" type="RayCast2D" parent="Visuals" unique_id=1147322477]

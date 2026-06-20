@@ -2,3 +2,10 @@ res://Scenes/player/player.tscn
 res://Scenes/game/bg.gdshader
 res://game_tile.tres
 res://Scenes/game/game.tscn
+res://Scenes/traps/spikes.gd
+res://Scenes/traps/spikes.tscn
+res://AutoLoad/event_manager.gd
+res://Scenes/traps/spike_block.tscn
+res://Scenes/traps/spike_block.gd
+res://Scenes/game/game.gd
+res://Scenes/player/player.gd
