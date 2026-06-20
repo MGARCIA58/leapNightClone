@@ -20,6 +20,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=2126168358]
+modulate = Color(0.48178947, 0.48178947, 0.48178947, 1)
 material = SubResource("ShaderMaterial_d0b77")
 layout_mode = 0
 offset_left = -2.0
