@@ -12,3 +12,6 @@ res://Scenes/player/player.gd
 res://Scenes/fruits/fruitbase.tscn
 res://Scenes/fruits/fruit.gd
 res://Scenes/fruits/fruit_banana.tscn
+res://Scenes/extra/custom_path_follow.tscn
+res://Scenes/extra/custom_path_follow.gd
+res://Scenes/game/camera_2d.gd
