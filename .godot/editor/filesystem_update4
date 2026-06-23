@@ -10,3 +10,6 @@ res://Scenes/game/game.gd
 res://Scenes/game/camera_2d.gd
 res://Scenes/traps/moving_rock.tscn
 res://Scenes/traps/moving_rock.gd
+res://Scenes/extra/checkpoint.gd
+res://Scenes/extra/checkpoint.tscn
+res://AutoLoad/event_manager.gd

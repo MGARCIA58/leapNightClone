@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cnufxctdb24k2" path="res://Scenes/extra/custom_path_follow.tscn" id="9_5l446"]
 [ext_resource type="PackedScene" uid="uid://dlqyyef6jxlbt" path="res://Scenes/enemies/enemy_blue_bird.tscn" id="11_meiaf"]
 [ext_resource type="PackedScene" uid="uid://2mld3533hqhb" path="res://Scenes/traps/moving_rock.tscn" id="12_kw6cb"]
+[ext_resource type="PackedScene" uid="uid://dt17w6fr17wmh" path="res://Scenes/extra/checkpoint.tscn" id="13_ii7ab"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0b77"]
 shader = ExtResource("1_g0siu")
@@ -50,7 +51,7 @@ stretch_mode = 1
 
 [node name="Player" parent="." unique_id=354303938 instance=ExtResource("1_vcfng")]
 unique_name_in_owner = true
-position = Vector2(137, -692)
+position = Vector2(149, 350)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=471512036]
 limit_left = 0
@@ -240,5 +241,14 @@ move_distance = 96.0
 [node name="Floor_7" type="Node2D" parent="." unique_id=1354987946]
 position = Vector2(129, -951)
 
+[node name="Checkpoint" parent="Floor_7" unique_id=1532762586 instance=ExtResource("13_ii7ab")]
+position = Vector2(0, 55)
+
+[node name="Floor_8" type="Node2D" parent="." unique_id=345322163]
+position = Vector2(134, -1111)
+
 [node name="SpawnPos" type="Marker2D" parent="." unique_id=2121909734]
 position = Vector2(131, 389)
+
+[node name="checkpointRespawnPos" type="Marker2D" parent="." unique_id=907517679]
+position = Vector2(135, -942)
