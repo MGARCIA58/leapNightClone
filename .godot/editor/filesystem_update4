@@ -13,3 +13,5 @@ res://Scenes/traps/moving_rock.gd
 res://Scenes/extra/checkpoint.gd
 res://Scenes/extra/checkpoint.tscn
 res://AutoLoad/event_manager.gd
+res://Scenes/traps/spike_ball.tscn
+res://Scenes/traps/spike_ball.gd
