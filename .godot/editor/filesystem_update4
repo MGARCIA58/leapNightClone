@@ -8,3 +8,5 @@ res://Scenes/enemies/enemy_base.tscn
 res://Scenes/player/player.gd
 res://Scenes/game/game.gd
 res://Scenes/game/camera_2d.gd
+res://Scenes/traps/moving_rock.tscn
+res://Scenes/traps/moving_rock.gd
