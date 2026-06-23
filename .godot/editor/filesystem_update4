@@ -15,3 +15,5 @@ res://Scenes/extra/checkpoint.tscn
 res://AutoLoad/event_manager.gd
 res://Scenes/traps/spike_ball.tscn
 res://Scenes/traps/spike_ball.gd
+res://Scenes/enemies/enemy_rino.tscn
+res://Scenes/enemies/enemy_rino.gd
