@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name player
+class_name Player
 
 @export var max_speed := 180.0
 @export var jump_force := 450.0
@@ -9,6 +9,7 @@ class_name player
 @onready var visuals: Node2D = $Visuals
 @onready var anim_sprite: AnimatedSprite2D = %AnimatedSprite2D
 @onready var ray_cast: RayCast2D = %RayCast2D
+@onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 
 var jumps_left : int
 var move_direction := 1
@@ -76,3 +77,10 @@ func player_dead() -> void:
 	can_move = false
 	velocity = Vector2.ZERO
 	anim_sprite.play("dead")
+	collision_shape_2d.set_deferred("disabled",true)
+	
+func player_respawn() -> void:
+	anim_sprite.play("respawn")
+	await anim_sprite.animation_finished
+	can_move = true
+	collision_shape_2d.set_deferred("disabled",false)

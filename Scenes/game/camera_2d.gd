@@ -1,6 +1,6 @@
 extends Camera2D
 
-@onready var player: player = %Player
+@onready var player: Player = %Player
 
 func _process(delta: float) -> void:
 	var target_pos := player.global_position.y

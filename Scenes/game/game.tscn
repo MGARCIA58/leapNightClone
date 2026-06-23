@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://e2tolr6hq4jv" path="res://Scenes/fruits/fruit_banana.tscn" id="7_7trcl"]
 [ext_resource type="PackedScene" uid="uid://bdkxw7iiyctgg" path="res://Scenes/traps/spikes.tscn" id="8_nds08"]
 [ext_resource type="PackedScene" uid="uid://cnufxctdb24k2" path="res://Scenes/extra/custom_path_follow.tscn" id="9_5l446"]
+[ext_resource type="PackedScene" uid="uid://dlqyyef6jxlbt" path="res://Scenes/enemies/enemy_blue_bird.tscn" id="11_meiaf"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0b77"]
 shader = ExtResource("1_g0siu")
@@ -187,5 +188,20 @@ move_speed = 0.45
 
 [node name="FruitBanana" parent="Floor_5/Path2D3/CustomPathFollow" unique_id=1702560587 instance=ExtResource("7_7trcl")]
 
+[node name="Path2D4" type="Path2D" parent="Floor_5" unique_id=840975038]
+position = Vector2(0, 87)
+curve = SubResource("Curve2D_5l446")
+
+[node name="CustomPathFollow" parent="Floor_5/Path2D4" unique_id=1762851641 instance=ExtResource("9_5l446")]
+position = Vector2(51, -575)
+move_speed = 0.3
+
+[node name="EnemyBlueBird" parent="Floor_5/Path2D4/CustomPathFollow" unique_id=2049950902 node_paths=PackedStringArray("path") instance=ExtResource("11_meiaf")]
+collision_layer = 1
+path = NodePath("..")
+
 [node name="Floor_6" type="Node2D" parent="." unique_id=520859245]
 position = Vector2(129, -116)
+
+[node name="SpawnPos" type="Marker2D" parent="." unique_id=2121909734]
+position = Vector2(131, 389)
