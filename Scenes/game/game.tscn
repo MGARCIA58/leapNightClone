@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dynbmbb6hlapb" path="res://Scenes/traps/spike_ball.tscn" id="14_hxkax"]
 [ext_resource type="PackedScene" uid="uid://dk44havo7jokk" path="res://Scenes/enemies/enemy_rino.tscn" id="15_7rk1p"]
 [ext_resource type="PackedScene" uid="uid://dvpfombbd4h53" path="res://Scenes/enemies/enemy_pig.tscn" id="16_jbxxx"]
+[ext_resource type="PackedScene" uid="uid://cpwbhyuknm0py" path="res://Scenes/extra/end_checkpoint.tscn" id="17_2wwbv"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0b77"]
 shader = ExtResource("1_g0siu")
@@ -336,6 +337,9 @@ move_speed = 60
 
 [node name="Floor_11" type="Node2D" parent="." unique_id=6001495]
 position = Vector2(140, -1876)
+
+[node name="EndCheckpoint" parent="Floor_11" unique_id=374497132 instance=ExtResource("17_2wwbv")]
+position = Vector2(0, 51)
 
 [node name="SpawnPos" type="Marker2D" parent="." unique_id=2121909734]
 position = Vector2(131, 389)
