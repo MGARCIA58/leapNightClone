@@ -1,3 +1,9 @@
+Label
+TextureRect
+Control
+Button
+Panel
+CanvasLayer
 CollisionShape2D
 Sprite2D
 Area2D
@@ -6,9 +12,3 @@ Node2D
 Marker2D
 AnimatedSprite2D
 StaticBody2D
-CharacterBody2D
-Camera2D
-PathFollow2D
-Path2D
-AnimationPlayer
-Control

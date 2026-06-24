@@ -17,6 +17,8 @@
 [ext_resource type="PackedScene" uid="uid://dk44havo7jokk" path="res://Scenes/enemies/enemy_rino.tscn" id="15_7rk1p"]
 [ext_resource type="PackedScene" uid="uid://dvpfombbd4h53" path="res://Scenes/enemies/enemy_pig.tscn" id="16_jbxxx"]
 [ext_resource type="PackedScene" uid="uid://cpwbhyuknm0py" path="res://Scenes/extra/end_checkpoint.tscn" id="17_2wwbv"]
+[ext_resource type="FontFile" uid="uid://daihrgaf846ud" path="res://LeapNight Assets/Fonts/upheavtt.ttf" id="18_klkrs"]
+[ext_resource type="Texture2D" uid="uid://bn7geagmtnstt" path="res://LeapNight Assets/Sprites/Items/Fruits/Fruit.png" id="19_2kyel"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_d0b77"]
 shader = ExtResource("1_g0siu")
@@ -32,6 +34,24 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 51, -575, 0, 0, 0, 0, 236, -575)
 }
 point_count = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2kyel"]
+bg_color = Color(0.09293706, 0.6851695, 0.6785446, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_hy3pq"]
+font = ExtResource("18_klkrs")
+font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ai5tx"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ai5tx"]
+font = ExtResource("18_klkrs")
+font_size = 30
 
 [node name="Game" type="Node2D" unique_id=1083296686]
 script = ExtResource("1_d0b77")
@@ -55,7 +75,7 @@ stretch_mode = 1
 
 [node name="Player" parent="." unique_id=354303938 instance=ExtResource("1_vcfng")]
 unique_name_in_owner = true
-position = Vector2(134, -1516)
+position = Vector2(130, 380)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=471512036]
 limit_left = 0
@@ -346,3 +366,86 @@ position = Vector2(131, 389)
 
 [node name="checkpointRespawnPos" type="Marker2D" parent="." unique_id=907517679]
 position = Vector2(135, -942)
+
+[node name="GameUI" type="CanvasLayer" parent="." unique_id=1125988189]
+
+[node name="GameWonPanel" type="Panel" parent="GameUI" unique_id=1030291754]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(200, 150)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -75.0
+offset_right = 100.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2kyel")
+
+[node name="Label" type="Label" parent="GameUI/GameWonPanel" unique_id=187485544]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 21.0
+offset_right = 76.0
+offset_bottom = 50.0
+grow_horizontal = 2
+text = "GAME WON"
+label_settings = SubResource("LabelSettings_hy3pq")
+
+[node name="PlayButton" type="Button" parent="GameUI/GameWonPanel" unique_id=277481855]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -6.0
+offset_right = 75.0
+offset_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.036556214, 0.03655638, 0.036556244, 1)
+theme_override_fonts/font = ExtResource("18_klkrs")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_ai5tx")
+text = "Play"
+
+[node name="Control" type="Control" parent="GameUI" unique_id=2084840463]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 3
+anchors_preset = 0
+offset_left = -4.0
+offset_top = -9.0
+offset_right = 76.0
+offset_bottom = 41.0
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Control" unique_id=769804971]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("19_2kyel")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Points" type="Label" parent="GameUI/Control" unique_id=558567040]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 39.0
+offset_top = 5.0
+offset_right = 79.0
+offset_bottom = 41.0
+text = "0"
+label_settings = SubResource("LabelSettings_ai5tx")
+vertical_alignment = 1
+
+[connection signal="pressed" from="GameUI/GameWonPanel/PlayButton" to="." method="_on_play_button_pressed"]
